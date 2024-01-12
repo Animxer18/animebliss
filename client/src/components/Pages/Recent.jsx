@@ -6,7 +6,7 @@ const RecentPage = () => {
     <>
       <Navbar></Navbar>
       <InfiniteSection
-        url={"https://api.consumet.org/meta/anilist/recent-episodes"}
+        url={"https://animxer-api-phi.vercel.app/meta/anilist/recent-episodes"}
         itemlimit={21}
         sectiontitle={"Recent Episodes"}
         id="recent-section"
