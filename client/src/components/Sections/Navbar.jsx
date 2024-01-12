@@ -34,7 +34,7 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const searchAnime = (input) => {
-    return fetch("https://api.consumet.org/meta/anilist/" + input)
+    return fetch("https://animxer-api-phi.vercel.app/meta/anilist/" + input)
       .then((response) => {
         return response.json();
       })
