@@ -7,7 +7,7 @@ const MoviesPage = () => {
       <Navbar></Navbar>
       <InfiniteSection
         url={
-          "https://api.consumet.org/meta/anilist/advanced-search?format=MOVIE"
+          "https://animxer-api-phi.vercel.app/meta/anilist/advanced-search?format=MOVIE"
         }
         itemlimit={21}
         sectiontitle={"Top Anime Movies"}
