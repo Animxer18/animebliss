@@ -56,7 +56,7 @@ const AnimePlayerPage = () => {
 
   const initialFetch = async () => {
     return await axios
-      .get("https://api.consumet.org/meta/anilist/info/" + id)
+      .get("https://animxer-api-phi.vercel.app/meta/anilist/info/" + id)
       .then(({ data }) => {
         setAnime(data);
         setCurrentId(data.episodes[selectedOption - 1].id);
@@ -82,7 +82,7 @@ const AnimePlayerPage = () => {
   useEffect(() => {
     if (currentId !== "")
       fetchVideoById(
-        " https://api.consumet.org/meta/anilist/watch/" + currentId
+        " https://animxer-api-phi.vercel.app/meta/anilist/watch/" + currentId
       );
   }, [currentId]);
   useEffect(() => {
@@ -98,7 +98,7 @@ const AnimePlayerPage = () => {
               <AnimePlayer
                 setVideoIsLoading={SharedState.setVideoIsLoading}
                 animeInfoUrl={
-                  " https://api.consumet.org/meta/anilist/watch/" + currentId
+                  " https://animxer-api-phi.vercel.app/meta/anilist/watch/" + currentId
                 }
                 src={currentStreamUrl}
               ></AnimePlayer>
@@ -222,7 +222,7 @@ const AnimePlayerPage = () => {
             ></CarouselRenderer>
           )}
           <AnimeSection
-            url={"https://api.consumet.org/meta/anilist/trending"}
+            url={"https://animxer-api-phi.vercel.app/meta/anilist/trending"}
             id={"trending"}
             sectiontitle={"Trending"}
           ></AnimeSection>
